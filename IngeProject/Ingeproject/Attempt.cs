@@ -23,12 +23,16 @@ namespace Ingeproject
         }
         public Attempt()
         {
-
+            TimeAttempt = new int[4];
+            errorsAttempt = new int[4];
         }
         public Attempt(string _name,int _age)
         {
             name = _name;
             age = _age;
+            TimeAttempt = new int[4];
+            errorsAttempt = new int[4];
+
         }
 
         internal void save()
