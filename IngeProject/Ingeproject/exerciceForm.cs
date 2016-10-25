@@ -19,6 +19,7 @@ namespace Ingeproject
         Label current;
         int j = 0;
         int i = 1;
+        Inverter v;
         Stopwatch t = new Stopwatch();
         int[,] exercice1Tab = { 
             { 20, 179 }, 
@@ -70,7 +71,8 @@ namespace Ingeproject
                 cpt = 0;
                 j = 3;
                 t.Reset();
-                Inverter v = new Inverter(true, true);
+                v.Stop();
+                v = new Inverter(true, true);
                 v.Start();
                 current = new Label();
                 current.Top = 300;
@@ -95,7 +97,8 @@ namespace Ingeproject
                 cpt = 0;
                 j = 2;
                 t.Reset();
-                Inverter v = new Inverter(false, false);
+                v.Stop();
+                v = new Inverter(false, false);
                 v.Start();
                current = new Label();
                
@@ -137,7 +140,10 @@ namespace Ingeproject
                 i = 1;
                 cpt = 0;
                 t.Reset();
-                Inverter v = new Inverter(true, true);
+
+                v.Stop();
+                
+                v = new Inverter(true, true);
                 Button b = new Button();
                 b.Top = 100;
                 b.Left = 50;
@@ -151,7 +157,9 @@ namespace Ingeproject
         {
 
             MessageBox.Show("Dans cet exercice vous devrez etre le plus rapide et cliquer sur toutes les boites ");
-            Inverter v = new Inverter(false, false);
+
+            
+            v = new Inverter(false, false);
             Button b = new Button();
             b.Top = 100;
             b.Left = 50;
@@ -256,6 +264,7 @@ namespace Ingeproject
                 {
                     endE2 = true;
                     exercice3();
+                    
                 }
                
             }
