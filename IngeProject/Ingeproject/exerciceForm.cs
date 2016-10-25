@@ -72,7 +72,7 @@ namespace Ingeproject
                 j = 3;
                 t.Reset();
                 v.Stop();
-                v = new Inverter(true, true);
+                v = new Inverter(false,false);
                 v.Start();
                 current = new Label();
                 current.Top = 300;
@@ -143,7 +143,7 @@ namespace Ingeproject
 
                 v.Stop();
                 
-                v = new Inverter(true, true);
+                v = new Inverter(false, false);
                 Button b = new Button();
                 b.Top = 100;
                 b.Left = 50;
@@ -238,12 +238,11 @@ namespace Ingeproject
             Button old = (Button)sender;
             old.Visible = false;
 
-            if (i < 2)
+            if (i < 10)
             {
                 Button b = new Button();
                 b.Click += buttonex1Click;
                 b.Left = exercice1Tab[i, 0];
-                b.Text = Convert.ToString(j);
                 b.Top = exercice1Tab[i, 1];
                 this.Controls.Add(b);
                 i++;
