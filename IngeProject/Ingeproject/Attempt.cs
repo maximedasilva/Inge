@@ -21,10 +21,12 @@ namespace Ingeproject
         {
             get; set;
         }
+        public double[,] distance; 
         public Attempt()
         {
             TimeAttempt = new int[4];
-            errorsAttempt = new int[4];
+            errorsAttempt = new int[2];
+            distance = new double[10, 2];
         }
         public Attempt(string _name,int _age)
         {
@@ -32,12 +34,12 @@ namespace Ingeproject
             age = _age;
             TimeAttempt = new int[4];
             errorsAttempt = new int[4];
-
+            distance = new double[10, 2];
         }
 
         internal void save()
         {
-           
+            int j = 3;  
         }
     }
 }
