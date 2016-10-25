@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Ingeproject
 {
-    public partial class Form1 : Form
+    public partial class exerciceForm : Form
     {
         int i = 1;
         Stopwatch t = new Stopwatch();
@@ -27,8 +27,8 @@ namespace Ingeproject
             { 40, 280 }, 
             { 280, 20 } };
 
-
-        public Form1()
+        public Attempt actual { get; set; }
+        private void initialisation()
         {
             InitializeComponent();
             this.Width = 550;
@@ -40,6 +40,23 @@ namespace Ingeproject
             b.Click += buttonClick;
             v.Start();
             this.Controls.Add(b);
+            this.FormClosed += quit;
+        }
+
+        private void quit(object sender, FormClosedEventArgs e)
+        {
+            actual.save();
+            Application.Exit();
+        }
+
+        public exerciceForm(Attempt _actual)
+        {
+            actual = _actual;
+            initialisation();
+        }
+        public exerciceForm()
+        {
+            initialisation();
         }
         public void buttonClick(Object sender,EventArgs e)
         {

@@ -1,6 +1,6 @@
 ﻿namespace Ingeproject
 {
-    partial class Form1
+    partial class exerciceForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
