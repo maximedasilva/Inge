@@ -72,7 +72,7 @@ namespace Ingeproject
                 j = 3;
                 t.Reset();
                 v.Stop();
-                v = new Inverter(false,false);
+                v = new Inverter(true,true);
                 v.Start();
                 current = new Label();
                 current.Top = 300;
@@ -143,7 +143,7 @@ namespace Ingeproject
 
                 v.Stop();
                 
-                v = new Inverter(false, false);
+                v = new Inverter(true, true);
                 Button b = new Button();
                 b.Top = 100;
                 b.Left = 50;
@@ -216,7 +216,7 @@ namespace Ingeproject
         }
         private void quit(object sender, FormClosedEventArgs e)
         {
-            actual.save();
+
             Application.Exit();
         }
 

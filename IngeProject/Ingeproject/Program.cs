@@ -18,6 +18,6 @@ namespace Ingeproject
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new registrationForm());
         
-        }
+                    }
     }
 }
