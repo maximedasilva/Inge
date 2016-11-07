@@ -93,7 +93,7 @@
             this.Controls.Add(this.NameTB);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "registrationForm";
-            this.Text = "Inversed Mouse";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.AgeUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

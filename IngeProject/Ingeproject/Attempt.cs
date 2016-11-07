@@ -40,10 +40,19 @@ namespace Ingeproject
         }
         public void save()
         {
-
-
-            string path = (System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "save.xml"));
-            XDocument doc = XDocument.Load(path);
+            XDocument doc;
+            try {
+                string path = (System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "save.xml"));
+                doc = XDocument.Load(path);
+            }
+            catch
+            {
+                string fileName = "save.xml";
+                string current = System.IO.Directory.GetCurrentDirectory();
+                string pathTotal = System.IO.Path.Combine(current, fileName);
+                doc = XDocument.Load(pathTotal);
+                
+            }
             XElement test = new XElement("test");
             XElement tests = doc.Descendants("tests").First();
             test.SetAttributeValue("Nom", name);
